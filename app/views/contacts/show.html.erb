@@ -1,29 +1,12 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">
+    <%= @contact.first_name %> <%= @contact.last_name %>
+  </h1>
+  <p class="lead"><%= @contact.email %>   |   <%= @contact.phone %>   |   <%= @contact.twitter %></p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <%= link_to 'Edit', edit_contact_path(@contact), class:"btn btn-secondary" %>
+  <%= link_to 'Back', contacts_path, class:"btn btn-dark" %>
+</div>
+
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @contact.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @contact.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @contact.twitter %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
